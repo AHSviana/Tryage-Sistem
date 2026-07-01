@@ -1,0 +1,142 @@
+/* ══════════════════════════════════════
+   ui.module.css — Estilos dos componentes compartilhados
+══════════════════════════════════════ */
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.dot { width: 6px; height: 6px; border-radius: 50%; }
+
+.badge_VERMELHO { background: var(--vermelho-bg); color: var(--vermelho); }
+.badge_LARANJA  { background: var(--laranja-bg);  color: var(--laranja); }
+.badge_AMARELO  { background: var(--amarelo-bg);  color: var(--amarelo); }
+.badge_VERDE    { background: var(--verde-bg);    color: var(--verde); }
+.badge_AZUL     { background: var(--azul-bg);     color: var(--azul); }
+
+.dot_VERMELHO { background: var(--vermelho); }
+.dot_LARANJA  { background: var(--laranja); }
+.dot_AMARELO  { background: var(--amarelo); }
+.dot_VERDE    { background: var(--verde); }
+.dot_AZUL     { background: var(--azul); }
+
+/* Status badge */
+.statusBadge { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.status_AGUARDANDO_ATENDIMENTO { background: rgba(227,179,65,.15); color: var(--amarelo); }
+.status_EM_ATENDIMENTO         { background: rgba(47,129,247,.15); color: var(--accent); }
+.status_ATENDIDO               { background: var(--verde-bg); color: var(--verde); }
+.status_ALTA                   { background: rgba(139,148,158,.15); color: var(--text2); }
+
+/* Spinner */
+.pageLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  gap: 10px;
+  color: var(--text2);
+}
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Alert */
+.alert {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.alert_error   { background: rgba(248,81,73,.12);  color: var(--vermelho); border: 1px solid rgba(248,81,73,.25); }
+.alert_success { background: var(--verde-bg);      color: var(--verde);    border: 1px solid rgba(63,185,80,.25); }
+.alert_info    { background: var(--accent-glow);   color: var(--accent);   border: 1px solid rgba(47,129,247,.25); }
+
+/* Card */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+/* Modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modalLg { max-width: 760px; }
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.modalTitle    { font-size: 16px; font-weight: 700; }
+.modalSubtitle { font-size: 13px; color: var(--text2); margin-top: 2px; }
+.modalBody     { padding: 24px; }
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text2);
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color .15s;
+}
+.closeBtn:hover { color: var(--text); }
+
+/* Vitals */
+.vitalsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+.vitalCard  { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; text-align: center; }
+.vitalIcon  { margin-bottom: 6px; font-size: 18px; }
+.vitalValue { font-size: 18px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.vitalUnit  { font-size: 11px; color: var(--text2); }
+.vitalLabel { font-size: 11px; color: var(--text2); margin-top: 2px; }
+
+/* AI Result */
+.aiResult { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-top: 16px; }
+.aiHeader  { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.aiChip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(47,129,247,.15); color: var(--accent);
+  border-radius: 4px; padding: 3px 8px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+}
+.aiSubtitle   { font-size: 12px; color: var(--text2); }
+.aiSection    { margin-bottom: 10px; }
+.aiSectionTitle { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+.aiSectionText  { font-size: 13px; color: var(--text); line-height: 1.6; }

@@ -1,0 +1,57 @@
+/* ══════════════════════════════════════
+   global.css — Design tokens e reset
+══════════════════════════════════════ */
+
+:root {
+  --bg:       #0d1117;
+  --surface:  #161b22;
+  --surface2: #1c2128;
+  --border:   #30363d;
+
+  --text:  #e6edf3;
+  --text2: #8b949e;
+  --text3: #484f58;
+
+  --accent:      #2f81f7;
+  --accent-glow: rgba(47, 129, 247, 0.15);
+
+  --vermelho: #f85149;
+  --laranja:  #fb8f44;
+  --amarelo:  #e3b341;
+  --verde:    #3fb950;
+  --azul:     #58a6ff;
+
+  --vermelho-bg: rgba(248, 81, 73,  0.12);
+  --laranja-bg:  rgba(251, 143, 68, 0.12);
+  --amarelo-bg:  rgba(227, 179, 65, 0.12);
+  --verde-bg:    rgba(63, 185, 80,  0.12);
+  --azul-bg:     rgba(88, 166, 255, 0.12);
+
+  --sidebar-w: 240px;
+  --topbar-h:  56px;
+  --radius:    8px;
+  --radius-lg: 12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+button { font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }

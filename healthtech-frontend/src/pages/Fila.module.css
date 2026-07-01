@@ -1,0 +1,43 @@
+.item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface2);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.item:hover { border-color: var(--accent); background: var(--accent-glow); }
+
+.rank {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 12px; color: #fff; flex-shrink: 0;
+}
+
+.info { flex: 1; min-width: 0; }
+.name { font-weight: 600; font-size: 15px; }
+.symptoms { font-size: 12px; color: var(--text2); margin-top: 3px; }
+.meta { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.metaText { font-size: 11px; color: var(--text2); }
+
+.actions { display: flex; flex-direction: column; gap: 6px; }
+.btnCall {
+  padding: 6px 14px; border-radius: var(--radius);
+  background: var(--accent); color: #fff;
+  border: none; font-size: 12px; font-weight: 600;
+  cursor: pointer;
+}
+.btnCall:hover { background: #388bfd; }
+.btnView {
+  padding: 6px 14px; border-radius: var(--radius);
+  background: transparent; color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 12px; font-weight: 600; cursor: pointer;
+}
+.btnView:hover { background: var(--surface); }
+
+.empty { text-align: center; padding: 60px 20px; color: var(--text2); }
+.emptyIcon { font-size: 40px; margin-bottom: 12px; opacity: .4; }
+.empty h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }

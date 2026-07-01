@@ -1,0 +1,35 @@
+.page { max-width: 800px; }
+.back { background: none; border: none; color: var(--text2); cursor: pointer; font-size: 13px; margin-bottom: 20px; padding: 0; }
+.back:hover { color: var(--text); }
+
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+.nivel { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.nivelDesc { color: var(--text2); margin-top: 4px; }
+.meta { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+.metaDate { font-size: 12px; color: var(--text2); }
+
+.statusBox { text-align: right; flex-shrink: 0; }
+.statusLabel { font-size: 11px; color: var(--text2); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+.select {
+  display: block; width: 200px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text);
+  padding: 8px 12px; font-size: 13px; font-family: inherit; outline: none; cursor: pointer;
+}
+.btnSave {
+  display: block; width: 200px; margin-top: 6px;
+  padding: 8px; border-radius: var(--radius);
+  background: var(--accent); color: #fff;
+  border: none; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.btnSave:hover:not(:disabled) { background: #388bfd; }
+.btnSave:disabled { opacity: .6; cursor: not-allowed; }
+
+.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.fieldLabel { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+.fieldValue { font-size: 14px; }
+
+.symptomsBlock { margin-bottom: 16px; }
+.symptomsText { font-size: 14px; line-height: 1.6; }
