@@ -12,7 +12,7 @@ Sistema de triagem hospitalar com IA Gemini (gratuito) + frontend integrado prof
 | Banco de Dados | PostgreSQL 16 |
 | Segurança | Spring Security + JWT |
 | IA | **Google Gemini 1.5 Flash (GRATUITO)** |
-| Frontend | HTML/CSS/JS puro — servido pelo Spring Boot |
+| Frontend | React + Vite |
 | Docs | Swagger UI |
 | Infra | Docker Compose |
 
